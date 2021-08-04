@@ -13,6 +13,9 @@ This is a repository intended to serve as a starting point if you want to bootst
 - [Jest](https://jestjs.io) with [DOM Testing Library](https://testing-library.com/docs/dom-testing-library/intro)
 - [GitHub Action workflows](https://github.com/features/actions) set up to run tests and linting on push
 
+## Recommended Links
+- [Javascript best practices](https://github.com/goldbergyoni/nodebestpractices.git)
+- [Javascript testing best practices](https://github.com/goldbergyoni/javascript-testing-best-practices.git)
 ## Development
 
 ```bash
