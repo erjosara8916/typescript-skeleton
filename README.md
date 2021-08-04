@@ -13,9 +13,25 @@ This is a repository intended to serve as a starting point if you want to bootst
 - [Jest](https://jestjs.io) with [DOM Testing Library](https://testing-library.com/docs/dom-testing-library/intro)
 - [GitHub Action workflows](https://github.com/features/actions) set up to run tests and linting on push
 
+## Development
+
+```bash
+# install commitizen 
+npm i -g commitizen
+
+# run prettier watcher (run in another terminal)
+yarn prettier-watch
+
+# add all changes to repository and create bew commit
+yarn commit
+
+# configure project to create new commit
+git cz
+```
+
 ## Running the app
 
-```
+```bash
 # install dependencies
 yarn
 
