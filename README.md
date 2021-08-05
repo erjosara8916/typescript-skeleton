@@ -30,6 +30,9 @@ yarn commit
 
 # configure project to create new commit
 git cz
+
+# Run project with docker compose
+sudo docker-compose up
 ```
 
 ## Running the app
