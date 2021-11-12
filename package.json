@@ -7,16 +7,16 @@
   "author": "Erick Saravia erickjosue8916@gmail.com",
   "license": "MIT",
   "scripts": {
-    "start": "node ./dist/src/server.js",
-    "dev": "ts-node-dev ./src/server.ts",
+    "start:prod": "yarn build && node ./dist/server.js",
+    "start:dev": "ts-node-dev -r dotenv/config ./src/server.ts",
     "build": "tsc",
     "lint": "eslint --ignore-path .gitignore . --ext .ts",
     "lint:fix": "yarn lint -- --fix",
     "test": "jest --verbose",
     "commit": "git add . && cz",
-    "build-watch": "tsc --watch",
-    "prettier": "prettier --config .prettierrc 'src/**/*.jt' --write",
-    "prettier-watch": "onchange 'src/**/*.ts' 'tests/**/*.ts' 'scripts/**/*.ts' -- prettier --write {{changed}}"
+    "build:watch": "tsc --watch",
+    "format": "prettier --config .prettierrc 'src/**/*.jt' --write",
+    "format:watch": "onchange 'src/**/*.ts' 'tests/**/*.ts' 'scripts/**/*.ts' -- prettier --write {{changed}}"
   },
   "keywords": [
     "javascript",
@@ -40,6 +40,7 @@
     "@typescript-eslint/eslint-plugin": "^4.28.2",
     "@typescript-eslint/parser": "^4.28.2",
     "commitizen": "^4.2.4",
+    "dotenv": "^10.0.0",
     "eslint": "^7.30.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.23.4",
