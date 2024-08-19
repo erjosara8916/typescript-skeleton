@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  api:
+    build: 
+      context: ./
+      dockerfile: ./docker/development.Dockerfile
+    container_name: typescript_skeleton
+    env_file:
+      - .env
+    volumes:
+      - ./:/app
+      - /app/node_modules
+    ports:
+      - "5000:8080"
+      - "9229:9229"

@@ -1,17 +1,20 @@
 {
   "name": "typescript-api-skeleton",
-  "version": "1.0.0",
-  "description": "Skeleton for javascript projects",
+  "version": "2.0.0",
+  "description": "Skeleton for typescript projects",
   "main": "./src/server.ts",
-  "repository": "https://github.com/erickjosue8916/typescript_skeletons.git",
-  "author": "Erick Saravia erickjosue8916@gmail.com",
+  "repository": "https://github.com/erjosara8916/typescript_skeletons.git",
+  "author": "Erick Saravia <<ericksaravia16@gmail.com>>",
   "license": "MIT",
+  "engines": {
+    "node": ">=20.0.0"
+  },
   "scripts": {
-    "start:prod": "yarn build && node ./dist/server.js",
+    "start:prod": "pnpm build && node ./dist/server.js",
     "start:dev": "ts-node-dev -r dotenv/config ./src/server.ts",
     "build": "tsc",
     "lint": "eslint --ignore-path .gitignore . --ext .ts",
-    "lint:fix": "yarn lint -- --fix",
+    "lint:fix": "pnpm lint -- --fix",
     "test": "jest --verbose",
     "commit": "git add . && cz",
     "build:watch": "tsc --watch",
@@ -21,7 +24,6 @@
   "keywords": [
     "javascript",
     "typescript",
-    "joi",
     "express",
     "js"
   ],
@@ -65,5 +67,6 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  }
+  },
+  "packageManager": "pnpm@9.7.1+sha512.faf344af2d6ca65c4c5c8c2224ea77a81a5e8859cbc4e06b1511ddce2f0151512431dd19e6aff31f2c6a8f5f2aced9bd2273e1fed7dd4de1868984059d2c4247"
 }
